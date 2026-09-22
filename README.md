@@ -1,1 +1,357 @@
-IyDwn4+tIEZsb3cgRmFjdG9yeQoKQSBjb29wZXJhdGl2ZSAqKmZhY3RvcnktbWFuYWdlbWVudCByZXRyb3NwZWN0aXZlKiogZm9yIGEgZGlzdHJpYnV0ZWQgc29mdHdhcmUgdGVhbSBvZiBhYm91dCBzaXggdG8gZWlnaHQgcGVvcGxlLiBFdmVyeW9uZSBqb2lucyBhIHJvb20gZnJvbSB0aGVpciBvd24gYnJvd3NlciwgbG9ncyB3aGF0IGhlbHBlZCBhbmQgd2hhdCBqYW1tZWQgdGhlIGxhc3QgZmV3IHdlZWtzLCB3YXRjaGVzIHRoZSBmYWN0b3J5IHJ1biwgYW5kIHRoZW4gc3BlbmRzIHRlbiBzaGFyZWQgR2VhciBDb2lucyBvbiB0aGUgZXhwZXJpbWVudHMgdGhlIHRlYW0gYWN0dWFsbHkgd2FudHMgdG8gdHJ5LgoKSXQgaXMgYSBmYWNpbGl0YXRpb24gdG95LCBub3QgYSBmb3JlY2FzdGluZyB0b29sLiBUaGUgc2ltdWxhdGlvbiBpcyBkZXRlcm1pbmlzdGljIGFuZCBzeW1ib2xpYyDigJQgaXQgZXhpc3RzIHRvIG1ha2UgdGhlIHRlYW0ncyBvd24gb2JzZXJ2YXRpb25zIHRhbmdpYmxlIGFuZCB0byBnaXZlIHRoZSBjb252ZXJzYXRpb24gc29tZXdoZXJlIHRvIHBvaW50LgoKLS0tCgojIyBDb250ZW50cwoKLSBbV2hhdCBhIHNlc3Npb24gbG9va3MgbGlrZV0oI3doYXQtYS1zZXNzaW9uLWxvb2tzLWxpa2UpCi0gW1F1aWNrIHN0YXJ0XSgjcXVpY2stc3RhcnQpCi0gW1JlcXVpcmVtZW50c10oI3JlcXVpcmVtZW50cykKLSBbU2NyaXB0c10oI3NjcmlwdHMpCi0gW0hvdyB0aGUgc2ltdWxhdGlvbiB3b3Jrc10oI2hvdy10aGUtc2ltdWxhdGlvbi13b3JrcykKLSBbU2F2aW5nIHRoZSByZXRybyB0byBHaXRIdWJdKCNzYXZpbmctdGhlLXJldHJvLXRvLWdpdGh1YikKLSBbRW52aXJvbm1lbnQgdmFyaWFibGVzXSgjZW52aXJvbm1lbnQtdmFyaWFibGVzKQotIFtBcmNoaXRlY3R1cmVdKCNhcmNoaXRlY3R1cmUpCi0gW1Byb2plY3QgbGF5b3V0XSgjcHJvamVjdC1sYXlvdXQpCi0gW0ZhY2lsaXRhdG9yIG5vdGVzXSgjZmFjaWxpdGF0b3Itbm90ZXMpCi0gW0luc3RydWN0aW9uc10oI2luc3RydWN0aW9ucykKICAxLiBbUnVuIGl0IGxvY2FsbHldKCMxLXJ1bi1pdC1sb2NhbGx5KQogIDIuIFtSdW4gdGhlIHRlc3RzXSgjMi1ydW4tdGhlLXRlc3RzKQogIDMuIFtCdWlsZCBmb3IgcHJvZHVjdGlvbl0oIzMtYnVpbGQtZm9yLXByb2R1Y3Rpb24pCiAgNC4gW0NyZWF0ZSB0aGUgWklQXSgjNC1jcmVhdGUtdGhlLXppcCkKICA1LiBbQ3JlYXRlIHRoZSBHaXRIdWIgcmVwb3NpdG9yeSBhbmQgcHVzaF0oIzUtY3JlYXRlLXRoZS1naXRodWItcmVwb3NpdG9yeS1hbmQtcHVzaCkKICA2LiBbRGVwbG95IHRvIFJlbmRlcl0oIzYtZGVwbG95LXRvLXJlbmRlcikKICA3LiBbU2V0IHRoZSBSZW5kZXIgZW52aXJvbm1lbnQgdmFyaWFibGVzXSgjNy1zZXQtdGhlLXJlbmRlci1lbnZpcm9ubWVudC12YXJpYWJsZXMpCiAgOC4gW0NyZWF0ZSB0aGUgZmluZS1ncmFpbmVkIEdpdEh1YiB0b2tlbl0oIzgtY3JlYXRlLXRoZS1maW5lLWdyYWluZWQtZ2l0aHViLXRva2VuKQoKLS0tCgojIyBXaGF0IGEgc2Vzc2lvbiBsb29rcyBsaWtlCgpQbGFuIGZvciA2MOKAkzc1IG1pbnV0ZXMuIFRoZSBmYWNpbGl0YXRvciAod2hvZXZlciBjcmVhdGVkIHRoZSByb29tKSBtb3ZlcyBldmVyeW9uZSBiZXR3ZWVuIHBoYXNlcy4KCnwgIyB8IFBoYXNlIHwgV2hhdCBoYXBwZW5zIHwKfC0tLXwtLS0tLS0tfC0tLS0tLS0tLS0tLS0tfAp8IDEgfCAqKlNoaWZ0IGNoZWNrLWluKiogfCBFYWNoIHBlcnNvbiBwaWNrcyBhbiBhdmF0YXIsIGFuIGVuZXJneSBsZXZlbCAx4oCTNSwgYW5kIGhvdyB0aGUgZmFjdG9yeSBmZWVsczogU21vb3RoLCBCdXN5LCBKYW1tZWQsIE9uIEZpcmUgb3IgTXlzdGVyaW91c2x5IFF1aWV0LiBUaGUgcm9vbSBzZWVzIHRoZSBhZ2dyZWdhdGUsIG5ldmVyIHdobyBzYWlkIHdoYXQuIHwKfCAyIHwgKipCdWlsZCB0aGUgY3VycmVudCBmYWN0b3J5KiogfCBQcml2YXRlbHkgbG9nIHVwIHRvICoqMiBCb29zdGVycyoqLCB1cCB0byAqKjIgQm90dGxlbmVja3MqKiBhbmQgZXhhY3RseSAqKjEgV2lsZGNhcmQqKi4gRWFjaCBnZXRzIGEgdGl0bGUsIGEgZGVzY3JpcHRpb24sIGEgc3RhdGlvbiAob3IgKkFjcm9zcyB0aGUgZmFjdG9yeSopIGFuZCBhbiBpbXBhY3Qgb2YgMeKAkzMuIE5vdGhpbmcgaXMgcmV2ZWFsZWQgdW50aWwgZXZlcnlvbmUgaXMgcmVhZHkuIHwKfCAzIHwgKipGaXJzdCBmYWN0b3J5IHJ1bioqIHwgQSB+NDgtc2Vjb25kIGFuaW1hdGVkIHJ1biBvZiB0aGUgYmVsdHMgd2l0aCB0aG9zZSBjb25kaXRpb25zIGFwcGxpZWQuIFBhdXNlLCByZXN1bWUgYW5kIHNraXAgYXJlIGF2YWlsYWJsZSB0byB0aGUgZmFjaWxpdGF0b3IuIFN5bWJvbGljIHRocm91Z2hwdXQsIHF1ZXVlcywgd2FybmluZyBsaWdodHMsIGFuZCB0aGUgc3Ryb25nZXN0IEJvb3N0ZXJzIGFuZCBCb3R0bGVuZWNrcy4gfAp8IDQgfCAqKkluc3BlY3QgdGhlIG1hY2hpbmVyeSoqIHwgRXZlcnlvbmUgZ2V0cyAqKjQgaW5zcGVjdGlvbiB0b2tlbnMqKiB0byBzcGVuZCBvbiB0aGUgaXRlbXMgd29ydGggZGlzY3Vzc2luZy4gUmVzdWx0cyBhcmUgcmV2ZWFsZWQsIHRoZW4gZGlzY3Vzc2VkIG9uZSBhdCBhIHRpbWUgd2l0aCBhIGNvbmZpZ3VyYWJsZSB0aW1lciAoKzEgbWludXRlIG9uIGRlbWFuZCkuIE5lYXItZHVwbGljYXRlcyBjYW4gYmUgbWVyZ2VkLCBhbmQgdGhlIG9yaWdpbmFscyBhcmUgcHJlc2VydmVkIGluIHRoZSBtZXJnZWQgaXRlbS4gfAp8IDUgfCAqKlVwZ3JhZGUgc2hvcCoqIHwgUHJvcG9zZSB1cGdyYWRlcyDigJQgZWFjaCBuZWVkcyBhIG5hbWUsIHRoZSBwcm9ibGVtLCB0aGUgZXhwZXJpbWVudCwgYW4gb2JzZXJ2YWJsZSBzaWduYWwsIGEgY29zdCBvZiAx4oCTNSBjb2lucywgYW5kIG9wdGlvbmFsbHkgYW4gb3duZXIgYW5kIGEgcmV2aWV3IGRhdGUuIEV2ZXJ5b25lIGZpbGxzIGEgcHJpdmF0ZSBiYXNrZXQgd2l0aGluIHRoZSAqKjEwIEdlYXIgQ29pbnMqKiwgYmFza2V0cyBhcmUgcmV2ZWFsZWQsIGFuZCB0aGUgcm9vbSBidXlzICoqb25lIG9yIHR3byoqIHVwZ3JhZGVzIHdpdGhpbiBidWRnZXQuIHwKfCA2IHwgKipJbXByb3ZlZCBmYWN0b3J5IHJ1bioqIHwgVGhlIHNhbWUgZmFjdG9yeSwgdGhlIHNhbWUgaW5wdXRzLCBub3cgd2l0aCB0aGUgcHVyY2hhc2VkIHVwZ3JhZGVzIGZpdHRlZC4gQSBiZWZvcmUvYWZ0ZXIgZGFzaGJvYXJkIHNob3dzIHdoYXQgY2hhbmdlZC4gfAp8IDcgfCAqKkVuZC1vZi1zaGlmdCByZXBvcnQqKiB8IEV2ZXJ5dGhpbmcgaW4gb25lIHBsYWNlLCBhIHNtYWxsIGNlbGVicmF0aW9uLCBhbmQgYSBzYXZlIGJ1dHRvbi4gfAoKU3VibWlzc2lvbnMsIHZvdGVzIGFuZCBub3RlcyBhcmUgKiphbm9ueW1vdXMgZXZlcnl3aGVyZSoqIOKAlCBpbiB0aGUgc2hhcmVkIHZpZXdzLCBpbiB0aGUgcmVwb3J0IGFuZCBpbiB0aGUgc2F2ZWQgSlNPTi4gVGhlIHNlcnZlciBzdHJpcHMgYXV0aG9yIGlkcyB3aGVuIGl0IHByb2plY3RzIHN0YXRlIHRvIGNsaWVudHMsIHNvIHRoZSBicm93c2VyIG5ldmVyIHJlY2VpdmVzIHRoZW0gaW4gdGhlIGZpcnN0IHBsYWNlLgoKLS0tCgojIyBRdWljayBzdGFydAoKYGBgYmFzaApucG0gaW5zdGFsbApucG0gcnVuIGRldgpgYGAKCk9wZW4gPGh0dHA6Ly9sb2NhbGhvc3Q6MzAwMD4sIGNyZWF0ZSBhIGZhY3RvcnksIGFuZCBzaGFyZSB0aGUgaW52aXRhdGlvbiBsaW5rIChpdCBjYXJyaWVzIGA/cm9vbT1DT0RFYCkgd2l0aCB0aGUgcmVzdCBvZiB0aGUgY3Jldy4KCi0tLQoKIyMgUmVxdWlyZW1lbnRzCgotICoqTm9kZS5qcyAyMiBvciBuZXdlcioqIChgbm9kZSAtLXZlcnNpb25gKQotIEEgbW9kZXJuIGJyb3dzZXIg4oCUIENocm9tZSwgRWRnZSwgRmlyZWZveCBvciBTYWZhcmkuIFRoZSBjbGllbnQgaXMgc2hpcHBlZCBhcyBuYXRpdmUgRVMgbW9kdWxlcywgc28gbm8gYnVuZGxlciBpcyBpbnZvbHZlZC4KLSBOb3RoaW5nIGVsc2UuIE5vIGRhdGFiYXNlLCBubyBSZWRpcywgbm8gYXV0aGVudGljYXRpb24gcHJvdmlkZXIuIFJvb21zIGxpdmUgaW4gbWVtb3J5IGFuZCBkaXNhcHBlYXIgd2hlbiB0aGUgcHJvY2VzcyByZXN0YXJ0cywgd2hpY2ggaXMgZXhhY3RseSB3aGF0IGEgb25lLWhvdXIgcmV0cm8gbmVlZHMuCgotLS0KCiMjIFNjcmlwdHMKCnwgU2NyaXB0IHwgV2hhdCBpdCBkb2VzIHwKfC0tLS0tLS0tfC0tLS0tLS0tLS0tLS0tfAp8IGBucG0gcnVuIGRldmAgfCBDbGVhbiwgYnVpbGQgYm90aCBoYWx2ZXMsIHRoZW4gc3RhcnQgdGhlIHNlcnZlci4gfAp8IGBucG0gcnVuIGJ1aWxkYCB8IENvbXBpbGUgdGhlIHNlcnZlciB0byBgZGlzdC9gIGFuZCB0aGUgYnJvd3NlciBjbGllbnQgdG8gYHB1YmxpYy9qcy9gLiB8CnwgYG5wbSBzdGFydGAgfCBSdW4gdGhlIGNvbXBpbGVkIHNlcnZlci4gVGhpcyBpcyB3aGF0IFJlbmRlciB1c2VzLiB8CnwgYG5wbSB0ZXN0YCB8IENvbXBpbGUgdGhlIHNlcnZlciBhbmQgcnVuIHRoZSB3aG9sZSB0ZXN0IHN1aXRlIG9uIGBub2RlIC0tdGVzdGAuIHwKfCBgbnBtIHJ1biBjbGVhbmAgfCBEZWxldGUgYGRpc3QvYCBhbmQgYHB1YmxpYy9qcy9gLiB8CgotLS0KCiMjIEhvdyB0aGUgc2ltdWxhdGlvbiB3b3JrcwoKVGhlIHNpbXVsYXRpb24gaXMgKipmdWxseSBkZXRlcm1pbmlzdGljKio6IG5vIHJhbmRvbW5lc3MgYW55d2hlcmUuIEdpdmVuIHRoZSBzYW1lIHN1Ym1pc3Npb25zIGFuZCB0aGUgc2FtZSBwdXJjaGFzZWQgdXBncmFkZXMsIGV2ZXJ5IGNsaWVudCBjb21wdXRlcyB0aGUgaWRlbnRpY2FsIHJ1biwgYW5kIHJlLXJ1bm5pbmcgcHJvZHVjZXMgdGhlIGlkZW50aWNhbCByZXN1bHQuIFRoYXQgbWF0dGVycyBmb3IgdHdvIHJlYXNvbnMg4oCUIGV2ZXJ5b25lIGluIHRoZSByb29tIHNlZXMgZXhhY3RseSB0aGUgc2FtZSBhbmltYXRpb24sIGFuZCBub2JvZHkgY2FuIGNsYWltIHRoZSBkaWNlIHdlcmUgdW5raW5kLgoKVGhlIHNlcnZlciBjb21wdXRlcyBhbGwgNjAgZnJhbWVzIHVwIGZyb250IGFuZCB0aGVuIHBsYXlzIHRoZW0gYmFjayBvbiBhIHNoYXJlZCBjbG9jaywgc28gYSBwZXJzb24gd2hvIGpvaW5zIGxhdGUgb3IgcmVjb25uZWN0cyBtaWQtcnVuIGRyb3BzIHN0cmFpZ2h0IGludG8gdGhlIHNhbWUgcG9zaXRpb24gYXMgZXZlcnlvbmUgZWxzZS4KCioqVGhlIHJ1bGVzLCBpbiBmdWxsOioqCgotIFRoZSBsaW5lIGhhcyBzZXZlbiBzdGF0aW9ucyBieSBkZWZhdWx0IOKAlCBUaWNrZXQgSW50YWtlLCBSZWFkeSBRdWV1ZSwgRGV2ZWxvcG1lbnQsIFJldmlldywgVGVzdCwgRGVwbG95LCBEb25lIOKAlCBhbmQgdGhlIGZhY2lsaXRhdG9yIGNhbiByZW5hbWUgdGhlbSBpbiB0aGUgbG9iYnkuCi0gV29yayBhcnJpdmVzIGF0IHRoZSBmaXJzdCBzdGF0aW9uIGF0ICoqMiBpdGVtcyBwZXIgdGljayoqLiBUaGVyZSBhcmUgKio2MCB0aWNrcyoqLCBwbGF5ZWQgYXQgODAwIG1zIGVhY2gsIHNvIGEgcnVuIGxhc3RzIGEgbGl0dGxlIHVuZGVyIDUwIHNlY29uZHMuCi0gRXZlcnkgc3RhdGlvbiBzdGFydHMgYXQgYSBiYXNlIHJhdGUgb2YgKioyIGl0ZW1zIHBlciB0aWNrKiogYW5kIGEgc3BlZWQgbXVsdGlwbGllciBvZiAqKjEuMCoqLgotIEVhY2ggKipCb3R0bGVuZWNrKiogc2xvd3MgaXRzIHN0YXRpb24gYnkgYGltcGFjdCDDlyAxNSVgLiBFYWNoICoqQm9vc3RlcioqIHNwZWVkcyBpdHMgc3RhdGlvbiB1cCBieSBgaW1wYWN0IMOXIDEyJWAuIEl0ZW1zIG1hcmtlZCAqQWNyb3NzIHRoZSBmYWN0b3J5KiBhcHBseSBhdCAqKmhhbGYgc3RyZW5ndGggdG8gZXZlcnkgc3RhdGlvbioqIGluc3RlYWQgb2YgZnVsbCBzdHJlbmd0aCB0byBvbmUuCi0gVGhlIHJlc3VsdGluZyBtdWx0aXBsaWVyIGlzIGNsYW1wZWQgdG8gdGhlIHJhbmdlICoqMC4yIOKAkyAyLjUqKiwgc28gbm8gc2luZ2xlIGl0ZW0gY2FuIHN0YWxsIG9yIHJvY2tldCB0aGUgbGluZSBlbnRpcmVseS4KLSBBIHN0YXRpb24gbGlnaHRzIGl0cyAqKndhcm5pbmcgbGFtcCoqIHdoZW4gaXRzIHF1ZXVlIHJlYWNoZXMgKio2IG9yIG1vcmUqKiBpdGVtcy4KLSAqKldpbGRjYXJkcyoqIGZpcmUgYXMgdGltZWQgZXZlbnRzOiB0aGUgZmlyc3QgYXQgdGljayAxMCwgdGhlbiBldmVyeSAxMCB0aWNrcywgZWFjaCBsYXN0aW5nIDUgdGlja3MgYW5kIGN1dHRpbmcgdGhlIGFmZmVjdGVkIHN0YXRpb24ncyBzcGVlZCB0byAqKjU1JSoqIHdoaWxlIGl0IGlzIGFjdGl2ZS4gVGhlIGJhbm5lciBuYW1lcyB0aGUgd2lsZGNhcmQgd2hpbGUgaXQgcnVucy4KLSBJbiB0aGUgc2Vjb25kIHJ1biwgZWFjaCBwdXJjaGFzZWQgKip1cGdyYWRlKiogcmVsaWV2ZXMgKio1MCUqKiBvZiB0aGUgYWNjdW11bGF0ZWQgYm90dGxlbmVjayBwZW5hbHR5IGF0IGl0cyBzdGF0aW9uIGFuZCBhZGRzIGEgZnVydGhlciAqKjUlIHBlciBjb2luIHNwZW50KiouIEFuIHVwZ3JhZGUgYWltZWQgKkFjcm9zcyB0aGUgZmFjdG9yeSogc3ByZWFkcyB0aGUgc2FtZSByZWxpZWYgdGhpbmx5IG92ZXIgZXZlcnkgc3RhdGlvbi4KLSBUaGUgZGFzaGJvYXJkJ3MgbnVtYmVycyDigJQgaXRlbXMgc2hpcHBlZCwgd29yayBpbiBwcm9ncmVzcywgdGhlIHdhaXRpbmcgaW5kaWNhdG9yLCB3YXJuaW5nIGxpZ2h0cyDigJQgYXJlICoqc3ltYm9saWMgY291bnRlcnMqKiwgbm90IGVzdGltYXRlcyBvZiBhbnl0aGluZyByZWFsLgoKRXZlcnkgc2NyZWVuIHRoYXQgc2hvd3MgYSBudW1iZXIgY2FycmllcyB0aGUgbGluZSAqKiJHYW1lIHNpbXVsYXRpb27igJRub3QgYSBkZWxpdmVyeSBmb3JlY2FzdC4iKiogUGxlYXNlIGxlYXZlIGl0IHRoZXJlLgoKLS0tCgojIyBTYXZpbmcgdGhlIHJldHJvIHRvIEdpdEh1YgoKQXQgdGhlIGVuZCBvZiB0aGUgc2hpZnQgdGhlIHJvb20gY2FuIGNvbW1pdCBhIGNsZWFuLCBhbm9ueW1vdXMgSlNPTiBzbmFwc2hvdCBvZiB0aGUgc2Vzc2lvbiB0byBhIEdpdEh1YiByZXBvc2l0b3J5LgoKKipXaG8gY2FuIGRvIGl0LioqIFRoZSBidXR0b24gYXBwZWFycyBvbmx5IGZvciBhIGNvbm5lY3RlZCBwbGF5ZXIgd2hvc2UgbmFtZSBpcyBleGFjdGx5IGBNYXJrdXNgIOKAlCBjYXNlLXNlbnNpdGl2ZSwgdmVyaWZpZWQgb24gdGhlIHNlcnZlciwgbm90IGluIHRoZSBicm93c2VyLiBUaGUgY2xpZW50IGlzIG5vdCB0cnVzdGVkIHRvIGRlY2lkZSB0aGlzOyB0aGUgc2VydmVyIGNoZWNrcyB0aGUgbmFtZSBhZ2FpbiB3aGVuIHRoZSBzYXZlIHJlcXVlc3QgYXJyaXZlcy4KCj4g4pqg77iPICoqVGhpcyBpcyBhIGNvbnZlbmllbmNlIHBlcm1pc3Npb24sIG5vdCBhdXRoZW50aWNhdGlvbi4qKiBBbnlvbmUgd2hvIHR5cGVzIGBNYXJrdXNgIGludG8gdGhlIG5hbWUgZmllbGQgaW4gdGhhdCByb29tIGdldHMgdGhlIGJ1dHRvbi4gSXQgZXhpc3RzIHNvIG9uZSBrbm93biBwZXJzb24gaW4gYSB0ZWFtIHRoYXQgYWxyZWFkeSB0cnVzdHMgZWFjaCBvdGhlciBjYW4gZmlsZSB0aGUgbm90ZXMsIGFuZCBpdCBpcyBub3QgYSBzZWN1cml0eSBjb250cm9sLiBJZiB5b3UgbmVlZCByZWFsIGFjY2VzcyBjb250cm9sLCBwdXQgdGhlIGRlcGxveW1lbnQgYmVoaW5kIGFuIGF1dGhlbnRpY2F0aW5nIHByb3h5LgoKKipXaGF0IGdldHMgY29tbWl0dGVkLioqCgotIFBhdGg6IGByZXRyby1zYXZlcy9mbG93LWZhY3RvcnkvWVlZWS1NTS1ERF9ISC1tbV9yb29tLUNPREUuanNvbmAgKFVUQykuCi0gQ29tbWl0IG1lc3NhZ2U6IGBGbG93IEZhY3RvcnkgcmV0cm86IDxmYWN0b3J5IG5hbWU+IChyb29tIDxDT0RFPikgb24gPGRhdGU+YC4KLSBDb250ZW50czogdGhlIGNoZWNrLWluIGFnZ3JlZ2F0ZSwgdGhlIHN0YXRpb25zLCBhbGwgQm9vc3RlcnMsIEJvdHRsZW5lY2tzIGFuZCBXaWxkY2FyZHMsIG1lcmdlZCBpdGVtcyB3aXRoIHRoZWlyIG9yaWdpbmFscywgaW5zcGVjdGlvbiB0b2tlbiB0b3RhbHMsIGRpc2N1c3Npb24gbm90ZXMsIGV2ZXJ5IHVwZ3JhZGUgcHJvcG9zYWwgd2l0aCBpdHMgc3VwcG9ydCBjb3VudCwgd2hhdCB3YXMgcHVyY2hhc2VkLCBhbmQgdGhlIGJlZm9yZS9hZnRlciBtZXRyaWNzLgotICoqRXhjbHVkZWQgYnkgY29uc3RydWN0aW9uKio6IHNvY2tldCBpZHMsIHJlY29ubmVjdGlvbiB0b2tlbnMsIHBsYXllciBpZHMsIGFuZCB0aGUgYXV0aG9yIG9mIGFueSBzdWJtaXNzaW9uLCB2b3RlIG9yIG5vdGUuIFRoZSBzbmFwc2hvdCBpcyBidWlsdCBmcm9tIHRoZSBzYW1lIHB1YmxpYyBwcm9qZWN0aW9uIHRoZSBicm93c2VyIHNlZXMsIHNvIHRoZXJlIGlzIG5vIHBhdGggZm9yIHRob3NlIGZpZWxkcyB0byBsZWFrIGluLiBQYXJ0aWNpcGFudCBuYW1lcyBhcHBlYXIgb25seSBhcyBhIHBsYWluIGxpc3Qgb2Ygd2hvIHdhcyBpbiB0aGUgcm9vbS4KCioqU2FmZXR5IGRldGFpbHMuKiogVGhlIGJ1dHRvbiBkaXNhYmxlcyBpdHNlbGYgb24gY2xpY2sgc28gYSBkb3VibGUtY2xpY2sgY2Fubm90IHByb2R1Y2UgdHdvIGNvbW1pdHMuIFRoZSBVSSBuZXZlciBjbGFpbXMgc3VjY2VzcyBiZWZvcmUgR2l0SHViIGNvbmZpcm1zIHRoZSBjb21taXQg4oCUIG9uIHN1Y2Nlc3MgaXQgc2hvd3MgdGhlIGZpbGUncyBVUkw7IG9uIGZhaWx1cmUgaXQgc2hvd3Mgd2hhdCB3ZW50IHdyb25nLCB3aXRoIHRoZSB0b2tlbiByZWRhY3RlZCBmcm9tIGFueSBlcnJvciB0ZXh0LiBgR0lUSFVCX1RPS0VOYCBpcyBuZXZlciBzZW50IHRvIHRoZSBicm93c2VyIGFuZCBuZXZlciBsb2dnZWQuCgoqKklmIEdpdEh1YiBpcyBub3QgY29uZmlndXJlZCoqLCB0aGUgZ2FtZSBpcyBjb21wbGV0ZWx5IHVuYWZmZWN0ZWQuIE1hcmt1cyBzZWVzIGEgc2hvcnQgbWVzc2FnZSBuYW1pbmcgdGhlIG1pc3NpbmcgdmFyaWFibGVzLCBhbmQgdGhlICoqRG93bmxvYWQgSlNPTioqIGJ1dHRvbiDigJQgd2hpY2ggcHJvZHVjZXMgdGhlIGlkZW50aWNhbCBzbmFwc2hvdCBhcyBhIGxvY2FsIGZpbGUg4oCUIHdvcmtzIGZvciBoaW0gcmVnYXJkbGVzcy4KCi0tLQoKIyMgRW52aXJvbm1lbnQgdmFyaWFibGVzCgpDb3B5IGAuZW52LmV4YW1wbGVgIHRvIGAuZW52YCBmb3IgbG9jYWwgZGV2ZWxvcG1lbnQuIEFsbCBvZiB0aGVzZSBhcmUgcmVhZCAqKnNlcnZlci1zaWRlIG9ubHkqKi4KCnwgVmFyaWFibGUgfCBSZXF1aXJlZCB8IERlZmF1bHQgfCBQdXJwb3NlIHwKfC0tLS0tLS0tLS18LS0tLS0tLS0tLXwtLS0tLS0tLS18LS0tLS0tLS0tfAp8IGBQT1JUYCB8IG5vIHwgYDMwMDBgIHwgSFRUUCBwb3J0LiBSZW5kZXIgc2V0cyB0aGlzIGZvciB5b3U7IHRoZSBzZXJ2ZXIgYWx3YXlzIHJlYWRzIGBwcm9jZXNzLmVudi5QT1JUYC4gfAp8IGBOT0RFX0VOVmAgfCBubyB8IOKAlCB8IFNldCB0byBgcHJvZHVjdGlvbmAgb24gYSBkZXBsb3llZCBpbnN0YW5jZS4gRW5hYmxlcyBzdGF0aWMtYXNzZXQgY2FjaGluZy4gfAp8IGBHSVRIVUJfVE9LRU5gIHwgZm9yIHNhdmluZyB8IOKAlCB8IEZpbmUtZ3JhaW5lZCB0b2tlbiB3aXRoICoqQ29udGVudHM6IFJlYWQgYW5kIHdyaXRlKiogb24gdGhlIHRhcmdldCByZXBvIG9ubHkuIHwKfCBgR0lUSFVCX09XTkVSYCB8IGZvciBzYXZpbmcgfCDigJQgfCBUaGUgdXNlciBvciBvcmdhbmlzYXRpb24gdGhhdCBvd25zIHRoZSByZXBvc2l0b3J5LiB8CnwgYEdJVEhVQl9SRVBPYCB8IGZvciBzYXZpbmcgfCDigJQgfCBUaGUgcmVwb3NpdG9yeSBuYW1lLCB3aXRob3V0IHRoZSBvd25lciBwcmVmaXguIHwKfCBgR0lUSFVCX0JSQU5DSGAgfCBubyB8IGBtYWluYCB8IFRoZSBicmFuY2ggdGhhdCByZWNlaXZlcyB0aGUgY29tbWl0LiBJdCBtdXN0IGFscmVhZHkgZXhpc3QuIHwKCmAvaGVhbHRoYCByZXBvcnRzIGBnaXRodWJDb25maWd1cmVkYCBhcyBhIGJvb2xlYW4gc28geW91IGNhbiBjb25maXJtIGEgZGVwbG95bWVudCBwaWNrZWQgdGhlIHZhcmlhYmxlcyB1cCDigJQgd2l0aG91dCByZXZlYWxpbmcgYW55IG9mIHRoZWlyIHZhbHVlcy4KCi0tLQoKIyMgQXJjaGl0ZWN0dXJlCgotICoqU2VydmVyLWF1dGhvcml0YXRpdmUuKiogRXZlcnkgYWN0aW9uIGlzIHZhbGlkYXRlZCBvbiB0aGUgc2VydmVyOiBwaGFzZSwgcGVybWlzc2lvbiwgbGVuZ3RoIGxpbWl0cywgYnVkZ2V0cywgdG9rZW4gY291bnRzLCBkdXBsaWNhdGUgbmFtZXMuIFRoZSBicm93c2VyIGlzIHRyZWF0ZWQgYXMgYSBkaXNwbGF5LCBuZXZlciBhcyBhIHNvdXJjZSBvZiB0cnV0aC4gQSBjcmFmdGVkIHNvY2tldCBtZXNzYWdlIGNhbm5vdCBleGNlZWQgNCB0b2tlbnMsIHNwZW5kIDExIGNvaW5zLCBidXkgMyB1cGdyYWRlcywgb3IgbW92ZSBhIHBoYXNlIHdpdGhvdXQgYmVpbmcgdGhlIGZhY2lsaXRhdG9yLgotICoqU2FuaXRpc2F0aW9uLioqIEFsbCBmcmVlIHRleHQgaXMgdHJpbW1lZCwgbGVuZ3RoLWNhcHBlZCBhbmQgc3RyaXBwZWQgb2YgY29udHJvbCBjaGFyYWN0ZXJzIGJlZm9yZSBpdCBpcyBzdG9yZWQuIFRleHQgcmVhY2hlcyB0aGUgRE9NIG9ubHkgdGhyb3VnaCBgdGV4dENvbnRlbnRgLCBzbyBhIHN1Ym1pc3Npb24gY2FuIG5ldmVyIGJlIGludGVycHJldGVkIGFzIG1hcmt1cC4KLSAqKlJhdGUgbGltaXRpbmcuKiogU29ja2V0IGFjdGlvbnMgYXJlIGNhcHBlZCBwZXIgY29ubmVjdGlvbiBpbiBhIHJvbGxpbmcgd2luZG93LCBzYXZpbmcgaGFzIGl0cyBvd24gY29vbGRvd24sIGFuZCBIVFRQIHJlcXVlc3RzIGFyZSBjYXBwZWQgcGVyIElQLgotICoqUmVjb25uZWN0aW9uLioqIEVhY2ggcGxheWVyIGdldHMgYSByZWNvbm5lY3QgdG9rZW4gaGVsZCBpbiBgc2Vzc2lvblN0b3JhZ2VgLiBSZWZyZXNoaW5nIHRoZSBwYWdlLCBjbG9zaW5nIHRoZSBsYXB0b3AgbGlkIG9yIGxvc2luZyBXaS1GaSBwdXRzIHlvdSBiYWNrIGluIHRoZSBzYW1lIHNlYXQgd2l0aCB0aGUgc2FtZSBzdWJtaXNzaW9ucy4gVGhlIGNyZXcgcmFpbCBzaG93cyB3aG8gaXMgY3VycmVudGx5IGRpc2Nvbm5lY3RlZC4KLSAqKkZhY2lsaXRhdG9yIHRyYW5zZmVyLioqIElmIHRoZSBmYWNpbGl0YXRvciBkcm9wcyBhbmQgZG9lcyBub3QgcmV0dXJuIHdpdGhpbiBhIGdyYWNlIHBlcmlvZCwgdGhlIHJvbGUgcGFzc2VzIHRvIHRoZSBsb25nZXN0LWNvbm5lY3RlZCByZW1haW5pbmcgcGxheWVyIGFuZCB0aGUgcm9vbSBpcyB0b2xkLgotICoqUm9vbSBjbGVhbnVwLioqIEEgamFuaXRvciBzd2VlcHMgZW1wdHkgcm9vbXMgYWZ0ZXIgMzAgbWludXRlcyBhbmQgaWRsZSByb29tcyBhZnRlciA2IGhvdXJzLCBzbyBhIGxvbmctcnVubmluZyBpbnN0YW5jZSBkb2VzIG5vdCBhY2N1bXVsYXRlIGFiYW5kb25lZCBzdGF0ZS4KLSAqKkhlYWx0aCBjaGVjay4qKiBgR0VUIC9oZWFsdGhgIHJldHVybnMgc3RhdHVzLCB1cHRpbWUsIHJvb20gY291bnQgYW5kIEdpdEh1YiBjb25maWd1cmF0aW9uLgotICoqTm8gYnVpbGQgbWFnaWMuKiogVHdvIGB0c2NgIGludm9jYXRpb25zOiBvbmUgZm9yIHRoZSBzZXJ2ZXIgKGBkaXN0L2ApLCBvbmUgZm9yIHRoZSBicm93c2VyIChgcHVibGljL2pzL2AsIGVtaXR0ZWQgYXMgbmF0aXZlIEVTIG1vZHVsZXMpLiBUaGUgU29ja2V0LklPIGJyb3dzZXIgY2xpZW50IGlzIHNlcnZlZCBieSB0aGUgc2VydmVyIGl0c2VsZiBhdCBgL3NvY2tldC5pby9zb2NrZXQuaW8uanNgLgoKLS0tCgojIyBQcm9qZWN0IGxheW91dAoKYGBgCmZsb3ctZmFjdG9yeS8K4pSc4pSA4pSAIHBhY2thZ2UuanNvbgrilJzilIDilIAgcGFja2FnZS1sb2NrLmpzb24K4pSc4pSA4pSAIHRzY29uZmlnLmpzb24gICAgICAgICAgICAgICAgIHNlcnZlciBidWlsZCAtPiBkaXN0LwrilJzilIDilIAgdHNjb25maWcuY2xpZW50Lmpzb24gICAgICAgICAgYnJvd3NlciBidWlsZCAtPiBwdWJsaWMvanMvCuKUnOKUgOKUgCByZW5kZXIueWFtbArilJzilIDilIAgLmVudi5leGFtcGxlCuKUnOKUgOKUgCAuZ2l0aWdub3JlCuKUnOKUgOKUgCBSRUFETUUubWQK4pSc4pSA4pSAIHNjcmlwdHMvCuKUgiAgIOKUlOKUgOKUgCBjbGVhbi5qcwrilJzilIDilIAgcHVibGljLwrilIIgICDilJzilIDilIAgaW5kZXguaHRtbArilIIgICDilJTilIDilIAgc3R5bGVzLmNzcwrilJTilIDilIAgc3JjLwogICAg4pSc4pSA4pSAIHNoYXJlZC8gICAgICAgICAgICAgICAgICAgaW1wb3J0ZWQgYnkgYm90aCBzaWRlcwogICAg4pSCICAg4pSc4pSA4pSAIGNvbnN0YW50cy50cyAgICAgICAgICBwaGFzZXMsIGxpbWl0cywgc2ltdWxhdGlvbiB0dW5pbmcKICAgIOKUgiAgIOKUnOKUgOKUgCBldmVudHMudHMgICAgICAgICAgICAgc29ja2V0IGV2ZW50IG5hbWVzCiAgICDilIIgICDilJTilIDilIAgdHlwZXMudHMKICAgIOKUnOKUgOKUgCBzZXJ2ZXIvCiAgICDilIIgICDilJzilIDilIAgaW5kZXgudHMgICAgICAgICAgICAgIEV4cHJlc3MsIGhlYWRlcnMsIC9oZWFsdGgsIHN0YXRpYywgUE9SVAogICAg4pSCICAg4pSc4pSA4pSAIHNvY2tldHMudHMgICAgICAgICAgICBldmVudCB3aXJpbmcsIGJyb2FkY2FzdCwgcGxheWJhY2sgY2xvY2sKICAgIOKUgiAgIOKUnOKUgOKUgCBnYW1lLnRzICAgICAgICAgICAgICAgZXZlcnkgYWN0aW9uIGFuZCB0aGUgcGhhc2UgZW5naW5lCiAgICDilIIgICDilJzilIDilIAgc3RhdGUudHMgICAgICAgICAgICAgIHJvb20gbW9kZWwsIHN0b3JlLCBqYW5pdG9yCiAgICDilIIgICDilJzilIDilIAgdmlldy50cyAgICAgICAgICAgICAgIHBlci1wbGF5ZXIgcHJvamVjdGlvbiAoaGlkZXMgYXV0aG9ycykKICAgIOKUgiAgIOKUnOKUgOKUgCBzaW11bGF0aW9uLnRzICAgICAgICAgdGhlIGRldGVybWluaXN0aWMgZW5naW5lCiAgICDilIIgICDilJzilIDilIAgc25hcHNob3QudHMgICAgICAgICAgIGFub255bW91cyBKU09OLCBwYXRoIGFuZCBjb21taXQgbWVzc2FnZQogICAg4pSCICAg4pSc4pSA4pSAIGdpdGh1Yi50cyAgICAgICAgICAgICBDb250ZW50cyBBUEkgY2xpZW50CiAgICDilIIgICDilJzilIDilIAgc2FuaXRpemUudHMKICAgIOKUgiAgIOKUnOKUgOKUgCByYXRlTGltaXQudHMKICAgIOKUgiAgIOKUlOKUgOKUgCBpZHMudHMKICAgIOKUnOKUgOKUgCBjbGllbnQvCiAgICDilIIgICDilJzilIDilIAgbWFpbi50cyAgICAgICAgICAgICAgIHNoZWxsLCBwaGFzZSByb3V0ZXIsIGZhY2lsaXRhdG9yIGJhcgogICAg4pSCICAg4pSc4pSA4pSAIG5ldC50cyAgICAgICAgICAgICAgICBzb2NrZXQgc3RvcmUsIHNlc3Npb24gcGVyc2lzdGVuY2UKICAgIOKUgiAgIOKUnOKUgOKUgCBkb20udHMgICAgICAgICAgICAgICAgdGV4dENvbnRlbnQtb25seSBlbGVtZW50IGhlbHBlcnMKICAgIOKUgiAgIOKUnOKUgOKUgCBmYWN0b3J5LnRzICAgICAgICAgICAgdGhlIGFuaW1hdGVkIGZhY3RvcnkgZmxvb3IKICAgIOKUgiAgIOKUlOKUgOKUgCB2aWV3cy8gICAgICAgICAgICAgICAgb25lIG1vZHVsZSBwZXIgcGhhc2UKICAgIOKUlOKUgOKUgCB0ZXN0cy8KICAgICAgICDilJzilIDilIAgcm9vbXMudGVzdC50cwogICAgICAgIOKUnOKUgOKUgCBnYW1lLnRlc3QudHMKICAgICAgICDilJzilIDilIAgc2ltdWxhdGlvbi50ZXN0LnRzCiAgICAgICAg4pSc4pSA4pSAIHNhdmUudGVzdC50cwogICAgICAgIOKUlOKUgOKUgCBzYW5pdGl6ZS50ZXN0LnRzCmBgYAoKLS0tCgojIyBGYWNpbGl0YXRvciBub3RlcwoKLSAqKktleWJvYXJkOioqIGBTcGFjZWAgcGF1c2VzIGFuZCByZXN1bWVzIGEgcnVuIChpZ25vcmVkIHdoaWxlIHlvdSBhcmUgdHlwaW5nIGluIGEgZmllbGQpLgotICoqR29pbmcgYmFjayoqIGEgcGhhc2UgaXMgYWxsb3dlZCBhbmQgbm9uLWRlc3RydWN0aXZlIOKAlCB1c2VmdWwgd2hlbiBzb21lb25lIGpvaW5zIGxhdGUgZHVyaW5nIGNoZWNrLWluLgotICoqUmVzZXQqKiB3aXBlcyBldmVyeSBzdWJtaXNzaW9uLCB2b3RlLCBub3RlIGFuZCB1cGdyYWRlIGluIHRoZSByb29tIGFuZCBhc2tzIGZvciBjb25maXJtYXRpb24gZmlyc3QuIFRoZXJlIGlzIG5vIHVuZG8uCi0gKipSZW5hbWluZyBzdGF0aW9ucyoqIGluIHRoZSBsb2JieSBpcyB3b3J0aCA2MCBzZWNvbmRzIGlmIHlvdXIgd29ya2Zsb3cgZG9lcyBub3QgbG9vayBsaWtlIHRoZSBkZWZhdWx0IHNldmVuLgotIFRoZSBhcHAgcmVzcGVjdHMgYHByZWZlcnMtcmVkdWNlZC1tb3Rpb25gOiBiZWx0cywgZ2VhcnMgYW5kIGNvbmZldHRpIHN0b3AgYW5pbWF0aW5nIGZvciBhbnlvbmUgd2hvIGhhcyBhc2tlZCB0aGVpciBzeXN0ZW0gZm9yIHRoYXQuCgotLS0KCiMjIEluc3RydWN0aW9ucwoKIyMjIDEuIFJ1biBpdCBsb2NhbGx5CgpgYGBiYXNoCmNkIGZsb3ctZmFjdG9yeQpucG0gaW5zdGFsbApucG0gcnVuIGRldgpgYGAKClRoZW4gb3BlbiA8aHR0cDovL2xvY2FsaG9zdDozMDAwPi4gVG8gdGVzdCBpdCBhcyBhIGdyb3VwIG9uIG9uZSBtYWNoaW5lLCBvcGVuIGEgc2Vjb25kIGJyb3dzZXIgcHJvZmlsZSBvciBhIHByaXZhdGUgd2luZG93IOKAlCBlYWNoIHdpbmRvdyBpcyBhIHNlcGFyYXRlIHBsYXllci4KClRvIHBpY2sgYSBkaWZmZXJlbnQgcG9ydDoKCmBgYGJhc2gKUE9SVD00MDAwIG5wbSBydW4gZGV2CmBgYAoKIyMjIDIuIFJ1biB0aGUgdGVzdHMKCmBgYGJhc2gKbnBtIHRlc3QKYGBgCgpUaGlzIGNvbXBpbGVzIHRoZSBzZXJ2ZXIgYW5kIHJ1bnMgdGhlIHN1aXRlIHdpdGggTm9kZSdzIGJ1aWx0LWluIHRlc3QgcnVubmVyIOKAlCBubyB0ZXN0IGZyYW1ld29yayBkZXBlbmRlbmN5LiBJdCBjb3ZlcnMgcm9vbSBjcmVhdGlvbiBhbmQgY29kZXMsIGR1cGxpY2F0ZSBhbmQgaW52YWxpZCBuYW1lcywgcmVjb25uZWN0aW9uLCBwaGFzZSB0cmFuc2l0aW9ucyBhbmQgcGVybWlzc2lvbnMsIHNpbXVsYXRpb24gZGV0ZXJtaW5pc20gYW5kIGNsYW1waW5nLCBidWRnZXQgYW5kIHB1cmNoYXNlIGVuZm9yY2VtZW50LCBzbmFwc2hvdCBhbm9ueW1pdHksIHRoZSBmaWxlbmFtZSBhbmQgY29tbWl0IG1lc3NhZ2UsIHRoZSBNYXJrdXMtb25seSBzYXZlIHJ1bGUsIGJlaGF2aW91ciB3aXRoIG1pc3NpbmcgR2l0SHViIGNvbmZpZ3VyYXRpb24sIGFuZCB0ZXh0IHNhbml0aXNhdGlvbi4KCioqRXZlcnkgR2l0SHViIHJlcXVlc3QgaW4gdGhlIHN1aXRlIGlzIG1vY2tlZC4qKiBObyB0ZXN0IHRvdWNoZXMgdGhlIG5ldHdvcmsgb3IgbmVlZHMgYSB0b2tlbi4KCiMjIyAzLiBCdWlsZCBmb3IgcHJvZHVjdGlvbgoKYGBgYmFzaApucG0gcnVuIGJ1aWxkCm5wbSBzdGFydApgYGAKCmBucG0gcnVuIGJ1aWxkYCBjb21waWxlcyB0aGUgc2VydmVyIGludG8gYGRpc3QvYCBhbmQgdGhlIGJyb3dzZXIgY2xpZW50IGludG8gYHB1YmxpYy9qcy9gLiBgbnBtIHN0YXJ0YCBydW5zIGBkaXN0L3NlcnZlci9pbmRleC5qc2AsIHdoaWNoIGxpc3RlbnMgb24gYHByb2Nlc3MuZW52LlBPUlRgLgoKVmVyaWZ5IGl0IGlzIGhlYWx0aHk6CgpgYGBiYXNoCmN1cmwgaHR0cDovL2xvY2FsaG9zdDozMDAwL2hlYWx0aApgYGAKCiMjIyA0LiBDcmVhdGUgdGhlIFpJUAoKRnJvbSB0aGUgZGlyZWN0b3J5ICoqYWJvdmUqKiBgZmxvdy1mYWN0b3J5YCwgc28gdGhlIGFyY2hpdmUgY29udGFpbnMgdGhlIHByb2plY3QgZm9sZGVyOgoKYGBgYmFzaApjZCAuLgp6aXAgLXIgZmxvdy1mYWN0b3J5LnppcCBmbG93LWZhY3RvcnkgXAogIC14ICJmbG93LWZhY3Rvcnkvbm9kZV9tb2R1bGVzLyoiIFwKICAteCAiZmxvdy1mYWN0b3J5L2Rpc3QvKiIgXAogIC14ICJmbG93LWZhY3RvcnkvcHVibGljL2pzLyoiIFwKICAteCAiZmxvdy1mYWN0b3J5Ly5naXQvKiIgXAogIC14ICJmbG93LWZhY3RvcnkvLmVudiIKYGBgCgpPbiBXaW5kb3dzIFBvd2VyU2hlbGw6CgpgYGBwb3dlcnNoZWxsCkNvbXByZXNzLUFyY2hpdmUgLVBhdGggLlxmbG93LWZhY3RvcnkgLURlc3RpbmF0aW9uUGF0aCAuXGZsb3ctZmFjdG9yeS56aXAKYGBgCgooRGVsZXRlIGBub2RlX21vZHVsZXNgLCBgZGlzdGAgYW5kIGBwdWJsaWNcanNgIGZpcnN0LCBvciB0aGUgYXJjaGl2ZSB3aWxsIGJlIGVub3Jtb3VzLikKCldob2V2ZXIgcmVjZWl2ZXMgdGhlIFpJUCB1bnppcHMgaXQsIHJ1bnMgYG5wbSBpbnN0YWxsYCwgdGhlbiBgbnBtIHJ1biBkZXZgLgoKIyMjIDUuIENyZWF0ZSB0aGUgR2l0SHViIHJlcG9zaXRvcnkgYW5kIHB1c2gKCkNyZWF0ZSBhbiAqKmVtcHR5KiogcmVwb3NpdG9yeSBvbiBHaXRIdWIg4oCUIG5vIFJFQURNRSwgbm8gYC5naXRpZ25vcmVgLCBubyBsaWNlbmNlLCBzbyB0aGUgZmlyc3QgcHVzaCBpcyBub3QgcmVqZWN0ZWQuIFRoZW46CgpgYGBiYXNoCmNkIGZsb3ctZmFjdG9yeQpnaXQgaW5pdApnaXQgYWRkIC4KZ2l0IGNvbW1pdCAtbSAiRmxvdyBGYWN0b3J5OiBjb29wZXJhdGl2ZSByZXRyb3NwZWN0aXZlIGdhbWUiCmdpdCBicmFuY2ggLU0gbWFpbgpnaXQgcmVtb3RlIGFkZCBvcmlnaW4gaHR0cHM6Ly9naXRodWIuY29tLzxPV05FUj4vPFJFUE8+LmdpdApnaXQgcHVzaCAtdSBvcmlnaW4gbWFpbgpgYGAKCmBwYWNrYWdlLWxvY2suanNvbmAgKippcyoqIGNvbW1pdHRlZCDigJQgUmVuZGVyIG5lZWRzIGl0IGZvciBgbnBtIGNpYC4gYG5vZGVfbW9kdWxlcy9gLCBgZGlzdC9gLCBgcHVibGljL2pzL2AgYW5kIGAuZW52YCBhcmUgaWdub3JlZC4KCklmIHlvdSBpbnRlbmQgdG8gdXNlIHRoZSBHaXRIdWIgc2F2aW5nIGZlYXR1cmUsIHRoaXMgaXMgYWxzbyBhIGZpbmUgcmVwb3NpdG9yeSB0byBzYXZlIHRoZSByZXRyb3MgaW50bzsgdGhlIGFwcCBjcmVhdGVzIHRoZSBgcmV0cm8tc2F2ZXMvZmxvdy1mYWN0b3J5L2AgZm9sZGVyIG9uIGl0cyBmaXJzdCBjb21taXQuCgojIyMgNi4gRGVwbG95IHRvIFJlbmRlcgoKVGhlIHJlcG9zaXRvcnkgaW5jbHVkZXMgYHJlbmRlci55YW1sYCwgc28gUmVuZGVyIGNhbiBjb25maWd1cmUgaXRzZWxmLgoKKipVc2luZyB0aGUgYmx1ZXByaW50OioqCgoxLiBTaWduIGluIGF0IDxodHRwczovL3JlbmRlci5jb20+LgoyLiAqKk5ldyDihpIgQmx1ZXByaW50KiosIGNvbm5lY3QgeW91ciBHaXRIdWIgYWNjb3VudCwgYW5kIHBpY2sgdGhlIHJlcG9zaXRvcnkuCjMuIFJlbmRlciByZWFkcyBgcmVuZGVyLnlhbWxgIGFuZCBwcm9wb3NlcyBhIHdlYiBzZXJ2aWNlIG5hbWVkIGBmbG93LWZhY3RvcnlgLiBBcHBseSBpdC4KNC4gRmlsbCBpbiB0aGUgc2VjcmV0IGVudmlyb25tZW50IHZhcmlhYmxlcyB3aGVuIHByb21wdGVkIChzZWUgc3RlcCA3KSwgb3Igc2tpcCB0aGVtIOKAlCB0aGUgZ2FtZSBydW5zIGZpbmUgd2l0aG91dCB0aGVtLgoKKipDb25maWd1cmluZyBieSBoYW5kIGluc3RlYWQ6KioKCjEuICoqTmV3IOKGkiBXZWIgU2VydmljZSoqIGFuZCBjb25uZWN0IHRoZSByZXBvc2l0b3J5LgoyLiBSdW50aW1lICoqTm9kZSoqLCBCdWlsZCBjb21tYW5kIGBucG0gY2kgJiYgbnBtIHJ1biBidWlsZGAsIFN0YXJ0IGNvbW1hbmQgYG5wbSBzdGFydGAuCjMuIEhlYWx0aCBjaGVjayBwYXRoIGAvaGVhbHRoYC4KNC4gQWRkIGFuIGVudmlyb25tZW50IHZhcmlhYmxlIGBOT0RFX1ZFUlNJT05gID0gYDIyYC4KNS4gQ3JlYXRlIHRoZSBzZXJ2aWNlLgoKRG8gKipub3QqKiBzZXQgYFBPUlRgIHlvdXJzZWxmIOKAlCBSZW5kZXIgcHJvdmlkZXMgaXQsIGFuZCB0aGUgc2VydmVyIHJlYWRzIGl0LgoKVGhlIGZyZWUgcGxhbiBzbGVlcHMgYWZ0ZXIgaW5hY3Rpdml0eSBhbmQgd2FrZXMgb24gdGhlIG5leHQgcmVxdWVzdCwgd2hpY2ggdGFrZXMgYSBmZXcgc2Vjb25kcy4gU2luY2Ugcm9vbXMgbGl2ZSBpbiBtZW1vcnksIGEgc2xlZXAgb3IgYSByZWRlcGxveSBlbmRzIGFueSBzZXNzaW9uIGluIHByb2dyZXNzLiBTYXZlIHRoZSByZXRybyBiZWZvcmUgeW91IGZpbmlzaCwgYW5kIGZvciBhIHNjaGVkdWxlZCBzZXNzaW9uLCB3YWtlIHRoZSBpbnN0YW5jZSBhIG1pbnV0ZSBlYXJseS4KCiMjIyA3LiBTZXQgdGhlIFJlbmRlciBlbnZpcm9ubWVudCB2YXJpYWJsZXMKCkluIHRoZSBzZXJ2aWNlLCBvcGVuICoqRW52aXJvbm1lbnQg4oaSIEVudmlyb25tZW50IFZhcmlhYmxlcyoqIGFuZCBhZGQ6Cgp8IEtleSB8IFZhbHVlIHwKfC0tLS0tfC0tLS0tLS18CnwgYE5PREVfVkVSU0lPTmAgfCBgMjJgIHwKfCBgTk9ERV9FTlZgIHwgYHByb2R1Y3Rpb25gIHwKfCBgR0lUSFVCX1RPS0VOYCB8IHRoZSBmaW5lLWdyYWluZWQgdG9rZW4gZnJvbSBzdGVwIDggfAp8IGBHSVRIVUJfT1dORVJgIHwgdGhlIHJlcG8gb3duZXIsIGUuZy4gYG1hcmt1cy1leGFtcGxlYCB8CnwgYEdJVEhVQl9SRVBPYCB8IHRoZSByZXBvIG5hbWUsIGUuZy4gYHRlYW0tcmV0cm9zYCB8CnwgYEdJVEhVQl9CUkFOQ0hgIHwgYG1haW5gLCBvciB3aGljaGV2ZXIgYnJhbmNoIHNob3VsZCByZWNlaXZlIHRoZSBjb21taXRzIHwKClNhdmU7IFJlbmRlciByZWRlcGxveXMgYXV0b21hdGljYWxseS4gQ29uZmlybSBpdCB3b3JrZWQgYnkgb3BlbmluZyBgaHR0cHM6Ly88eW91ci1zZXJ2aWNlPi5vbnJlbmRlci5jb20vaGVhbHRoYCDigJQgYGdpdGh1YkNvbmZpZ3VyZWRgIHNob3VsZCBub3cgYmUgYHRydWVgLgoKTmV2ZXIgY29tbWl0IHRoZXNlIHZhbHVlcy4gYHJlbmRlci55YW1sYCBtYXJrcyB0aGUgdGhyZWUgc2VjcmV0cyBgc3luYzogZmFsc2VgIHByZWNpc2VseSBzbyB0aGV5IHN0YXkgb3V0IG9mIHRoZSByZXBvc2l0b3J5LgoKIyMjIDguIENyZWF0ZSB0aGUgZmluZS1ncmFpbmVkIEdpdEh1YiB0b2tlbgoKMS4gR28gdG8gPGh0dHBzOi8vZ2l0aHViLmNvbS9zZXR0aW5ncy9wZXJzb25hbC1hY2Nlc3MtdG9rZW5zPiBhbmQgY2hvb3NlICoqR2VuZXJhdGUgbmV3IHRva2VuIOKGkiBGaW5lLWdyYWluZWQgdG9rZW4qKi4KMi4gKipUb2tlbiBuYW1lKio6IHNvbWV0aGluZyByZWNvZ25pc2FibGUsIGUuZy4gYGZsb3ctZmFjdG9yeS1yZXRyby1zYXZlc2AuCjMuICoqRXhwaXJhdGlvbioqOiBwaWNrIHRoZSBzaG9ydGVzdCBwZXJpb2QgeW91IGNhbiBsaXZlIHdpdGguIFNldCBhIHJlbWluZGVyIHRvIHJvdGF0ZSBpdC4KNC4gKipSZXNvdXJjZSBvd25lcioqOiB5b3VyIHVzZXIsIG9yIHRoZSBvcmdhbmlzYXRpb24gdGhhdCBvd25zIHRoZSB0YXJnZXQgcmVwb3NpdG9yeS4gKE9yZ2FuaXNhdGlvbnMgbWF5IHJlcXVpcmUgYW4gb3duZXIgdG8gYXBwcm92ZSB0aGUgdG9rZW4uKQo1LiAqKlJlcG9zaXRvcnkgYWNjZXNzKio6ICoqT25seSBzZWxlY3QgcmVwb3NpdG9yaWVzKiosIGFuZCBzZWxlY3QganVzdCB0aGUgb25lIHJlcG9zaXRvcnkgdGhhdCB3aWxsIGhvbGQgdGhlIHJldHJvIGZpbGVzLgo2LiAqKlBlcm1pc3Npb25zIOKGkiBSZXBvc2l0b3J5IHBlcm1pc3Npb25zKio6IHNldCAqKkNvbnRlbnRzKiogdG8gKipSZWFkIGFuZCB3cml0ZSoqLiBMZWF2ZSAqKmV2ZXJ5dGhpbmcgZWxzZSBhdCAiTm8gYWNjZXNzIioqIOKAlCBDb250ZW50cyBpcyBhbGwgdGhlIGFwcCB1c2VzLCBhbmQgaXQgc2hvdWxkIG5vdCBiZSBhYmxlIHRvIGRvIGFueXRoaW5nIG1vcmUuIE1ldGFkYXRhIGlzIHJlYWQtb25seSBhbmQgZ2V0cyBpbmNsdWRlZCBhdXRvbWF0aWNhbGx5Lgo3LiBHZW5lcmF0ZSB0aGUgdG9rZW4gYW5kIGNvcHkgaXQgaW1tZWRpYXRlbHk7IEdpdEh1YiBzaG93cyBpdCBvbmNlLgo4LiBQYXN0ZSBpdCBpbnRvIGBHSVRIVUJfVE9LRU5gIG9uIFJlbmRlciAoc3RlcCA3KSwgb3IgaW50byB5b3VyIGxvY2FsIGAuZW52YCBmb3IgdGVzdGluZy4gTmV2ZXIgY29tbWl0IGl0LCBuZXZlciBwYXN0ZSBpdCBpbnRvIGEgY2hhdCwgYW5kIHJldm9rZSBpdCBhdCA8aHR0cHM6Ly9naXRodWIuY29tL3NldHRpbmdzL3BlcnNvbmFsLWFjY2Vzcy10b2tlbnM+IGlmIGl0IGlzIGV2ZXIgZXhwb3NlZC4KClRoZSBicmFuY2ggaW4gYEdJVEhVQl9CUkFOQ0hgIG11c3QgYWxyZWFkeSBleGlzdCDigJQgdGhlIGFwcCBjb21taXRzIHRvIGEgYnJhbmNoLCBpdCBkb2VzIG5vdCBjcmVhdGUgb25lLiBJZiB0aGUgcmVwb3NpdG9yeSBpcyBicmFuZCBuZXcgYW5kIGVtcHR5LCBwdXNoIGF0IGxlYXN0IG9uZSBjb21taXQgZmlyc3QuCgotLS0KCiMjIExpY2VuY2UKCkludGVybmFsIHRlYW0gdG9vbC4gVXNlIGl0LCBmb3JrIGl0LCByZW5hbWUgdGhlIHN0YXRpb25zLCBjaGFuZ2UgdGhlIG51bWJlcnMuCg==
+# 🏭 Flow Factory
+
+A cooperative **factory-management retrospective** for a distributed software team of about six to eight people. Everyone joins a room from their own browser, logs what helped and what jammed the last few weeks, watches the factory run, and then spends ten shared Gear Coins on the experiments the team actually wants to try.
+
+It is a facilitation toy, not a forecasting tool. The simulation is deterministic and symbolic — it exists to make the team's own observations tangible and to give the conversation somewhere to point.
+
+---
+
+## Contents
+
+- [What a session looks like](#what-a-session-looks-like)
+- [Quick start](#quick-start)
+- [Requirements](#requirements)
+- [Scripts](#scripts)
+- [How the simulation works](#how-the-simulation-works)
+- [Saving the retro to GitHub](#saving-the-retro-to-github)
+- [Environment variables](#environment-variables)
+- [Architecture](#architecture)
+- [Project layout](#project-layout)
+- [Facilitator notes](#facilitator-notes)
+- [Instructions](#instructions)
+  1. [Run it locally](#1-run-it-locally)
+  2. [Run the tests](#2-run-the-tests)
+  3. [Build for production](#3-build-for-production)
+  4. [Create the ZIP](#4-create-the-zip)
+  5. [Create the GitHub repository and push](#5-create-the-github-repository-and-push)
+  6. [Deploy to Render](#6-deploy-to-render)
+  7. [Set the Render environment variables](#7-set-the-render-environment-variables)
+  8. [Create the fine-grained GitHub token](#8-create-the-fine-grained-github-token)
+
+---
+
+## What a session looks like
+
+Plan for 60–75 minutes. The facilitator (whoever created the room) moves everyone between phases.
+
+| # | Phase | What happens |
+|---|-------|--------------|
+| 1 | **Shift check-in** | Each person picks an avatar, an energy level 1–5, and how the factory feels: Smooth, Busy, Jammed, On Fire or Mysteriously Quiet. The room sees the aggregate, never who said what. |
+| 2 | **Build the current factory** | Privately log up to **2 Boosters**, up to **2 Bottlenecks** and exactly **1 Wildcard**. Each gets a title, a description, a station (or *Across the factory*) and an impact of 1–3. Nothing is revealed until everyone is ready. |
+| 3 | **First factory run** | A ~48-second animated run of the belts with those conditions applied. Pause, resume and skip are available to the facilitator. Symbolic throughput, queues, warning lights, and the strongest Boosters and Bottlenecks. |
+| 4 | **Inspect the machinery** | Everyone gets **4 inspection tokens** to spend on the items worth discussing. Results are revealed, then discussed one at a time with a configurable timer (+1 minute on demand). Near-duplicates can be merged, and the originals are preserved in the merged item. |
+| 5 | **Upgrade shop** | Propose upgrades — each needs a name, the problem, the experiment, an observable signal, a cost of 1–5 coins, and optionally an owner and a review date. Everyone fills a private basket within the **10 Gear Coins**, baskets are revealed, and the room buys **one or two** upgrades within budget. |
+| 6 | **Improved factory run** | The same factory, the same inputs, now with the purchased upgrades fitted. A before/after dashboard shows what changed. |
+| 7 | **End-of-shift report** | Everything in one place, a small celebration, and a save button. |
+
+Submissions, votes and notes are **anonymous everywhere** — in the shared views, in the report and in the saved JSON. The server strips author ids when it projects state to clients, so the browser never receives them in the first place.
+
+---
+
+## Quick start
+
+```bash
+npm install
+npm run dev
+```
+
+Open <http://localhost:3000>, create a factory, and share the invitation link (it carries `?room=CODE`) with the rest of the crew.
+
+---
+
+## Requirements
+
+- **Node.js 22 or newer** (`node --version`)
+- A modern browser — Chrome, Edge, Firefox or Safari. The client is shipped as native ES modules, so no bundler is involved.
+- Nothing else. No database, no Redis, no authentication provider. Rooms live in memory and disappear when the process restarts, which is exactly what a one-hour retro needs.
+
+---
+
+## Scripts
+
+| Script | What it does |
+|--------|--------------|
+| `npm run dev` | Clean, build both halves, then start the server. |
+| `npm run build` | Compile the server to `dist/` and the browser client to `public/js/`. |
+| `npm start` | Run the compiled server. This is what Render uses. |
+| `npm test` | Compile the server and run the whole test suite on `node --test`. |
+| `npm run clean` | Delete `dist/` and `public/js/`. |
+
+---
+
+## How the simulation works
+
+The simulation is **fully deterministic**: no randomness anywhere. Given the same submissions and the same purchased upgrades, every client computes the identical run, and re-running produces the identical result. That matters for two reasons — everyone in the room sees exactly the same animation, and nobody can claim the dice were unkind.
+
+The server computes all 60 frames up front and then plays them back on a shared clock, so a person who joins late or reconnects mid-run drops straight into the same position as everyone else.
+
+**The rules, in full:**
+
+- The line has seven stations by default — Ticket Intake, Ready Queue, Development, Review, Test, Deploy, Done — and the facilitator can rename them in the lobby.
+- Work arrives at the first station at **2 items per tick**. There are **60 ticks**, played at 800 ms each, so a run lasts a little under 50 seconds.
+- Every station starts at a base rate of **2 items per tick** and a speed multiplier of **1.0**.
+- Each **Bottleneck** slows its station by `impact × 15%`. Each **Booster** speeds its station up by `impact × 12%`. Items marked *Across the factory* apply at **half strength to every station** instead of full strength to one.
+- The resulting multiplier is clamped to the range **0.2 – 2.5**, so no single item can stall or rocket the line entirely.
+- A station lights its **warning lamp** when its queue reaches **6 or more** items.
+- **Wildcards** fire as timed events: the first at tick 10, then every 10 ticks, each lasting 5 ticks and cutting the affected station's speed to **55%** while it is active. The banner names the wildcard while it runs.
+- In the second run, each purchased **upgrade** relieves **50%** of the accumulated bottleneck penalty at its station and adds a further **5% per coin spent**. An upgrade aimed *Across the factory* spreads the same relief thinly over every station.
+- The dashboard's numbers — items shipped, work in progress, the waiting indicator, warning lights — are **symbolic counters**, not estimates of anything real.
+
+Every screen that shows a number carries the line **"Game simulation—not a delivery forecast."** Please leave it there.
+
+---
+
+## Saving the retro to GitHub
+
+At the end of the shift the room can commit a clean, anonymous JSON snapshot of the session to a GitHub repository.
+
+**Who can do it.** The button appears only for a connected player whose name is exactly `Markus` — case-sensitive, verified on the server, not in the browser. The client is not trusted to decide this; the server checks the name again when the save request arrives.
+
+> ⚠️ **This is a convenience permission, not authentication.** Anyone who types `Markus` into the name field in that room gets the button. It exists so one known person in a team that already trusts each other can file the notes, and it is not a security control. If you need real access control, put the deployment behind an authenticating proxy.
+
+**What gets committed.**
+
+- Path: `retro-saves/flow-factory/YYYY-MM-DD_HH-mm_room-CODE.json` (UTC).
+- Commit message: `Flow Factory retro: <factory name> (room <CODE>) on <date>`.
+- Contents: the check-in aggregate, the stations, all Boosters, Bottlenecks and Wildcards, merged items with their originals, inspection token totals, discussion notes, every upgrade proposal with its support count, what was purchased, and the before/after metrics.
+- **Excluded by construction**: socket ids, reconnection tokens, player ids, and the author of any submission, vote or note. The snapshot is built from the same public projection the browser sees, so there is no path for those fields to leak in. Participant names appear only as a plain list of who was in the room.
+
+**Safety details.** The button disables itself on click so a double-click cannot produce two commits. The UI never claims success before GitHub confirms the commit — on success it shows the file's URL; on failure it shows what went wrong, with the token redacted from any error text. `GITHUB_TOKEN` is never sent to the browser and never logged.
+
+**If GitHub is not configured**, the game is completely unaffected. Markus sees a short message naming the missing variables, and the **Download JSON** button — which produces the identical snapshot as a local file — works for him regardless.
+
+---
+
+## Environment variables
+
+Copy `.env.example` to `.env` for local development. All of these are read **server-side only**.
+
+| Variable | Required | Default | Purpose |
+|----------|----------|---------|---------|
+| `PORT` | no | `3000` | HTTP port. Render sets this for you; the server always reads `process.env.PORT`. |
+| `NODE_ENV` | no | — | Set to `production` on a deployed instance. Enables static-asset caching. |
+| `GITHUB_TOKEN` | for saving | — | Fine-grained token with **Contents: Read and write** on the target repo only. |
+| `GITHUB_OWNER` | for saving | — | The user or organisation that owns the repository. |
+| `GITHUB_REPO` | for saving | — | The repository name, without the owner prefix. |
+| `GITHUB_BRANCH` | no | `main` | The branch that receives the commit. It must already exist. |
+
+`/health` reports `githubConfigured` as a boolean so you can confirm a deployment picked the variables up — without revealing any of their values.
+
+---
+
+## Architecture
+
+- **Server-authoritative.** Every action is validated on the server: phase, permission, length limits, budgets, token counts, duplicate names. The browser is treated as a display, never as a source of truth. A crafted socket message cannot exceed 4 tokens, spend 11 coins, buy 3 upgrades, or move a phase without being the facilitator.
+- **Sanitisation.** All free text is trimmed, length-capped and stripped of control characters before it is stored. Text reaches the DOM only through `textContent`, so a submission can never be interpreted as markup.
+- **Rate limiting.** Socket actions are capped per connection in a rolling window, saving has its own cooldown, and HTTP requests are capped per IP.
+- **Reconnection.** Each player gets a reconnect token held in `sessionStorage`. Refreshing the page, closing the laptop lid or losing Wi-Fi puts you back in the same seat with the same submissions. The crew rail shows who is currently disconnected.
+- **Facilitator transfer.** If the facilitator drops and does not return within a grace period, the role passes to the longest-connected remaining player and the room is told.
+- **Room cleanup.** A janitor sweeps empty rooms after 30 minutes and idle rooms after 6 hours, so a long-running instance does not accumulate abandoned state.
+- **Health check.** `GET /health` returns status, uptime, room count and GitHub configuration.
+- **No build magic.** Two `tsc` invocations: one for the server (`dist/`), one for the browser (`public/js/`, emitted as native ES modules). The Socket.IO browser client is served by the server itself at `/socket.io/socket.io.js`.
+
+---
+
+## Project layout
+
+```
+flow-factory/
+├── package.json
+├── package-lock.json
+├── tsconfig.json                 server build -> dist/
+├── tsconfig.client.json          browser build -> public/js/
+├── render.yaml
+├── .env.example
+├── .gitignore
+├── README.md
+├── scripts/
+│   └── clean.js
+├── public/
+│   ├── index.html
+│   └── styles.css
+└── src/
+    ├── shared/                   imported by both sides
+    │   ├── constants.ts          phases, limits, simulation tuning
+    │   ├── events.ts             socket event names
+    │   └── types.ts
+    ├── server/
+    │   ├── index.ts              Express, headers, /health, static, PORT
+    │   ├── sockets.ts            event wiring, broadcast, playback clock
+    │   ├── game.ts               every action and the phase engine
+    │   ├── state.ts              room model, store, janitor
+    │   ├── view.ts               per-player projection (hides authors)
+    │   ├── simulation.ts         the deterministic engine
+    │   ├── snapshot.ts           anonymous JSON, path and commit message
+    │   ├── github.ts             Contents API client
+    │   ├── sanitize.ts
+    │   ├── rateLimit.ts
+    │   └── ids.ts
+    ├── client/
+    │   ├── main.ts               shell, phase router, facilitator bar
+    │   ├── net.ts                socket store, session persistence
+    │   ├── dom.ts                textContent-only element helpers
+    │   ├── factory.ts            the animated factory floor
+    │   └── views/                one module per phase
+    └── tests/
+        ├── rooms.test.ts
+        ├── game.test.ts
+        ├── simulation.test.ts
+        ├── save.test.ts
+        └── sanitize.test.ts
+```
+
+---
+
+## Facilitator notes
+
+- **Keyboard:** `Space` pauses and resumes a run (ignored while you are typing in a field).
+- **Going back** a phase is allowed and non-destructive — useful when someone joins late during check-in.
+- **Reset** wipes every submission, vote, note and upgrade in the room and asks for confirmation first. There is no undo.
+- **Renaming stations** in the lobby is worth 60 seconds if your workflow does not look like the default seven.
+- The app respects `prefers-reduced-motion`: belts, gears and confetti stop animating for anyone who has asked their system for that.
+
+---
+
+## Instructions
+
+### 1. Run it locally
+
+```bash
+cd flow-factory
+npm install
+npm run dev
+```
+
+Then open <http://localhost:3000>. To test it as a group on one machine, open a second browser profile or a private window — each window is a separate player.
+
+To pick a different port:
+
+```bash
+PORT=4000 npm run dev
+```
+
+### 2. Run the tests
+
+```bash
+npm test
+```
+
+This compiles the server and runs the suite with Node's built-in test runner — no test framework dependency. It covers room creation and codes, duplicate and invalid names, reconnection, phase transitions and permissions, simulation determinism and clamping, budget and purchase enforcement, snapshot anonymity, the filename and commit message, the Markus-only save rule, behaviour with missing GitHub configuration, and text sanitisation.
+
+**Every GitHub request in the suite is mocked.** No test touches the network or needs a token.
+
+### 3. Build for production
+
+```bash
+npm run build
+npm start
+```
+
+`npm run build` compiles the server into `dist/` and the browser client into `public/js/`. `npm start` runs `dist/server/index.js`, which listens on `process.env.PORT`.
+
+Verify it is healthy:
+
+```bash
+curl http://localhost:3000/health
+```
+
+### 4. Create the ZIP
+
+From the directory **above** `flow-factory`, so the archive contains the project folder:
+
+```bash
+cd ..
+zip -r flow-factory.zip flow-factory \
+  -x "flow-factory/node_modules/*" \
+  -x "flow-factory/dist/*" \
+  -x "flow-factory/public/js/*" \
+  -x "flow-factory/.git/*" \
+  -x "flow-factory/.env"
+```
+
+On Windows PowerShell:
+
+```powershell
+Compress-Archive -Path .\flow-factory -DestinationPath .\flow-factory.zip
+```
+
+(Delete `node_modules`, `dist` and `public\js` first, or the archive will be enormous.)
+
+Whoever receives the ZIP unzips it, runs `npm install`, then `npm run dev`.
+
+### 5. Create the GitHub repository and push
+
+Create an **empty** repository on GitHub — no README, no `.gitignore`, no licence, so the first push is not rejected. Then:
+
+```bash
+cd flow-factory
+git init
+git add .
+git commit -m "Flow Factory: cooperative retrospective game"
+git branch -M main
+git remote add origin https://github.com/<OWNER>/<REPO>.git
+git push -u origin main
+```
+
+`package-lock.json` **is** committed — Render needs it for `npm ci`. `node_modules/`, `dist/`, `public/js/` and `.env` are ignored.
+
+If you intend to use the GitHub saving feature, this is also a fine repository to save the retros into; the app creates the `retro-saves/flow-factory/` folder on its first commit.
+
+### 6. Deploy to Render
+
+The repository includes `render.yaml`, so Render can configure itself.
+
+**Using the blueprint:**
+
+1. Sign in at <https://render.com>.
+2. **New → Blueprint**, connect your GitHub account, and pick the repository.
+3. Render reads `render.yaml` and proposes a web service named `flow-factory`. Apply it.
+4. Fill in the secret environment variables when prompted (see step 7), or skip them — the game runs fine without them.
+
+**Configuring by hand instead:**
+
+1. **New → Web Service** and connect the repository.
+2. Runtime **Node**, Build command `npm ci && npm run build`, Start command `npm start`.
+3. Health check path `/health`.
+4. Add an environment variable `NODE_VERSION` = `22`.
+5. Create the service.
+
+Do **not** set `PORT` yourself — Render provides it, and the server reads it.
+
+The free plan sleeps after inactivity and wakes on the next request, which takes a few seconds. Since rooms live in memory, a sleep or a redeploy ends any session in progress. Save the retro before you finish, and for a scheduled session, wake the instance a minute early.
+
+### 7. Set the Render environment variables
+
+In the service, open **Environment → Environment Variables** and add:
+
+| Key | Value |
+|-----|-------|
+| `NODE_VERSION` | `22` |
+| `NODE_ENV` | `production` |
+| `GITHUB_TOKEN` | the fine-grained token from step 8 |
+| `GITHUB_OWNER` | the repo owner, e.g. `markus-example` |
+| `GITHUB_REPO` | the repo name, e.g. `team-retros` |
+| `GITHUB_BRANCH` | `main`, or whichever branch should receive the commits |
+
+Save; Render redeploys automatically. Confirm it worked by opening `https://<your-service>.onrender.com/health` — `githubConfigured` should now be `true`.
+
+Never commit these values. `render.yaml` marks the three secrets `sync: false` precisely so they stay out of the repository.
+
+### 8. Create the fine-grained GitHub token
+
+1. Go to <https://github.com/settings/personal-access-tokens> and choose **Generate new token → Fine-grained token**.
+2. **Token name**: something recognisable, e.g. `flow-factory-retro-saves`.
+3. **Expiration**: pick the shortest period you can live with. Set a reminder to rotate it.
+4. **Resource owner**: your user, or the organisation that owns the target repository. (Organisations may require an owner to approve the token.)
+5. **Repository access**: **Only select repositories**, and select just the one repository that will hold the retro files.
+6. **Permissions → Repository permissions**: set **Contents** to **Read and write**. Leave **everything else at "No access"** — Contents is all the app uses, and it should not be able to do anything more. Metadata is read-only and gets included automatically.
+7. Generate the token and copy it immediately; GitHub shows it once.
+8. Paste it into `GITHUB_TOKEN` on Render (step 7), or into your local `.env` for testing. Never commit it, never paste it into a chat, and revoke it at <https://github.com/settings/personal-access-tokens> if it is ever exposed.
+
+The branch in `GITHUB_BRANCH` must already exist — the app commits to a branch, it does not create one. If the repository is brand new and empty, push at least one commit first.
+
+---
+
+## Licence
+
+Internal team tool. Use it, fork it, rename the stations, change the numbers.

@@ -1,0 +1,27 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+public/js/
+
+# environment
+.env
+.env.local
+*.env
+
+# logs
+npm-debug.log*
+yarn-error.log
+logs/
+*.log
+
+# editors / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# packaging
+*.zip
